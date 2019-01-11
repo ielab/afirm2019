@@ -39,12 +39,14 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
 
 I am reformatting the query below so as to read it better:
 
-```curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{
+```
+curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{
   "query": {
           "match" : {  
                     "title": "Multilingual"
                     }
             }
-  }'```
+  }'
+ ```
 
 ## Indexing a TREC collection
