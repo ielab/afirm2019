@@ -96,10 +96,28 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
 
 ## Indexing a TREC collection
 
-Next, we adventure ourselves into a more complex example: indexing a TREC collection. To this aim, we will consider a modern TREC collection: the ClueWeb12 collection. This collection is used in many of the current TREC and CLEF tasks, including [TREC Web Track 2013-2014](http://www-personal.umich.edu/~kevynct/trec-web-2014/), CLEF eHealth CHS Task 2016 and 2017. 
+Next, we adventure ourselves into a more complex example: indexing a TREC collection. To this aim, we will consider a modern TREC collection: the ClueWeb12 collection. This collection is used in many of the current TREC and CLEF tasks, including [TREC Web Track 2013-2014](http://www-personal.umich.edu/~kevynct/trec-web-2014/), [CLEF eHealth CHS Task 2016 and 2017](https://sites.google.com/site/clefehealth2017/task-3). 
 
 
+The index we will build will have two fields: `title` and `body`. Other fields are possible with this data -- but we consider these two only for simplicity. Each field will have its own custom similarity function to enable similarity tuning -- more details on this later.
 
+We shall apply pre-processing to both fields, including:
+
+- lowercasing
+- removing stop words based on the [Terrier](www.terrier.org) stopwords list
+- steeming using [Porter stemmer](https://lucene.apache.org/core/4_1_0/analyzers-common/org/tartarus/snowball/ext/PorterStemmer.html)
+
+### Pre-requisities
+
+To do this, we will use Python. This activity requires some pre-requisites:
+* Elasticsearch Python API, which can be found [here](https://elasticsearch-py.readthedocs.io/en/master/)
+* The Clueweb12 corpus. We cannot distribute this (you can find it at [the Lemur Project website](https://lemurproject.org/clueweb12/)), but we have made available a couple of archives from that corpus (from part B).
+* The Terrier stopword list. We have included this file in the folder `activity-1` of this tutorial.
+
+### Preliminaries
+
+1. Place the Terrier stopword list (`terrier-stop.txt`) in the `/config/stopwords` folder within your ElasticSearch installation.
+2. Download the example Clueweb12 data we have packaged for you at XXX. Decompress the archive, and place it into a new folder at the path `~\clueweb12_example\`.
 
 
 ## Solutions to exercises
