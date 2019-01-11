@@ -1,4 +1,5 @@
-# Hands-on Activity 1
+# Hands-on Activity 1: Basic Indexing and Search in Elasticsearch
+
 
 ## Simple indexing and searching
 
