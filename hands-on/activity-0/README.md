@@ -50,3 +50,16 @@ Elasticsearch is now running as a RESTful service on the workstation and listeni
 curl http://localhost:9200
 ```
 Elasticsearch is now responding you with a JSON answer, which include information about the Elasticsearch instance you are running.
+
+
+#### Configuring Elasticsearch
+Configurations are in `config/elasticsearch.yml`. This configuration file, for example, allows to change the port in which Elasticsearch listens. Each Elasticsearch node could be configured differently.
+
+For now, we will not change these configurations, but you are welcome to explore this file during the break.
+
+## Interacting with Elasticsearch
+
+Commands to Elasticsearch are in the form `<REST verb> /<indexname>/<API>`.
+For example: `GET /myindex/_search`. 
+
+These could be issued to RESTful clients. We have already used an alternative: the `curl` linux command. In curl, the same GET request as above becomes `curl -XGET "http://localhost:9200/my_index/_search"`. Before trying this, however, we need to index some documents. We shall see this in the next activity.
