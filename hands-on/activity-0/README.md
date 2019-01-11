@@ -6,7 +6,7 @@ In this setting-the-scene activity we are going to familiarise ourself with the 
 
 By typing
 
-```bash
+```console
 pwd
 ```
 you will be shown the current path at which you are -- for example `/home/c/csvisitor`.
@@ -15,7 +15,7 @@ you will be shown the current path at which you are -- for example `/home/c/csvi
 
 From the command line interface, clone the GitHub repository https://github.com/ielab/afirm2019. You do this by typing:
 
-```bash
+```console
 git clone https://github.com/ielab/afirm2019.git
 ```
 
