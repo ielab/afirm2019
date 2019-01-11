@@ -84,12 +84,8 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
  
  (if you prefer copy and pasting, the following line is easier: )
  ```console
- curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{"query": {"multi_match" : {"query":    "session", "fields": [ "title", "body" ]}}}
+ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{"query": {"multi_match" : {"query":    "session", "fields": [ "title", "body" ]}}}'
  ```
- 
-
-### Free-text search
-
 
 ## Indexing a TREC collection
 
