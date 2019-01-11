@@ -87,13 +87,22 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
  curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{"query": {"multi_match" : {"query":    "session", "fields": [ "title", "body" ]}}}'
  ```
 
+
+By the way, sometimes we may want to see all the documents in our index. To do this, we use the `match_all` query:
+
+```console
+curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{"query": {"match_all": {}}}'
+```
+
 ## Indexing a TREC collection
+
+
 
 
 
 ## Solutions to exercises
 
-### Exercise 1
+#### Exercise 1
 
 Query:
 ```console
@@ -102,7 +111,7 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
 
 Three document are retrieved (`"hits":{"total":3 ...`).
 
-## Exercise 2
+#### Exercise 2
 
 Query:
 ```console
