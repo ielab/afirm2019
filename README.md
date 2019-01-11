@@ -1,6 +1,8 @@
-# AFIRM 2019
+# AFIRM 2019 - Session on IR in Practice
 
+Welcome to the GitHub repository for the 2019 ACM SIGIR/SIGKDD Africa Summer School on Machine Learning for Data Mining and Search (AFIRM 2019) session on IR in Practice, 14-18 January 2019, Cape Town, South Africa. 
 
+Slides are available in the [slides folder](https://github.com/ielab/afirm2019/tree/master/slides) of this repository. The practical activities are listed below (with links); activity material is available in the [hands-on folder](https://github.com/ielab/afirm2019/tree/master/hands-on).
 
 ## Index of activities
 
