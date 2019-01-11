@@ -2,7 +2,7 @@
 
 Welcome to the hands-on activities of the IR in Practice session at AFIRM 2019.
 
-In this setting-the-scene activity we are going to familiarise ourself with the workstation at our disposal (a Linux box running Ubuntu 17.10) with both graphical and command line interfaces. We will often use the command line interface, so locate this and open a new command line. 
+In this setting-the-scene activity we are going to familiarise ourself with the workstation at our disposal (a Linux box running Ubuntu 17.10) with both graphical and command line interfaces (also called console or terminal). We will often use the command line interface, so locate this and open a new command line. 
 
 By typing
 
@@ -34,3 +34,19 @@ Once the download is completed, unpack the tar.gz archive
 tar -xvzf elasticsearch-6.5.4.tar.gz
 ```
 
+Next we can run the Elasticsearch server:
+
+```console
+elasticsearch-6.5.4/bin/
+./elasticsearch
+```
+
+This will start up Elasticsearch. This console is now taken over by Elasticsearch. Let's open a new console.
+(NB: Alternatively, we could have run Elasticsearch in a `screen` session)
+
+Elasticsearch is now running as a RESTful service on the workstation and listening/responding at port 9200 (we could have change the port). Let us check if indeed it is running; type:
+
+```console
+curl http://localhost:9200
+```
+Elasticsearch is now responding you with a JSON answer, which include information about the Elasticsearch instance you are running.
