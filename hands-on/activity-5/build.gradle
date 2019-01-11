@@ -1,0 +1,39 @@
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.file.StandardCopyOption
+
+group 'com.github.jimmyoentung'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.elasticsearch', name: 'elasticsearch', version: '5.1.1'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+//noinspection GroovyAssignabilityCheck
+task installPlugin(dependsOn: build) << {
+
+    def esPath = System.getenv('ES_PATH')
+    def jarName = "${rootProject.name}-${version}.jar"
+    def esPluginPath = Paths.get(esPath, "/modules/${rootProject.name}")
+    def esJarPath = Paths.get(esPluginPath.toString(), "/${jarName}")
+    def esPropsPath = Paths.get(esPluginPath.toString(), "/plugin-descriptor.properties")
+    def jarPath = Paths.get("${buildDir}/libs/${jarName}")
+    def propsPath = Paths.get("plugin-descriptor.properties")
+
+    if (!Files.exists(esPluginPath)) {
+        mkdir(esPluginPath.toString())
+    }
+
+    Files.copy(jarPath, esJarPath, StandardCopyOption.REPLACE_EXISTING)
+    Files.copy(propsPath, esPropsPath, StandardCopyOption.REPLACE_EXISTING)
+}
