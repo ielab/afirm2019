@@ -151,3 +151,4 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
 ```
 
 This returns 3 results. Note also that Elasticsearch performed lowercasing when doing the indexing: in fact our lowecase query matched documents where the term was capitalised.
+
