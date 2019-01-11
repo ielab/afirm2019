@@ -1,65 +1,50 @@
-# Hands-on Activity 0
+# Hands-on Activity 1
 
-Welcome to the hands-on activities of the IR in Practice session at AFIRM 2019.
+## Simple indexing and searching
 
-In this setting-the-scene activity we are going to familiarise ourself with the workstation at our disposal (a Linux box running Ubuntu 17.10) with both graphical and command line interfaces (also called console or terminal). We will often use the command line interface, so locate this and open a new command line. 
+Let us start by understanding the basic concepts and commands for creating an index, inserting a document, and searching for documents in Elasticsearch.
 
-By typing
-
+To create an index, we use the `PUT` verb:
 ```console
-pwd
-```
-you will be shown the current path at which you are -- for example `/home/c/csvisitor`.
-
-## Preliminary activities
-
-From the command line interface, clone the GitHub repository https://github.com/ielab/afirm2019. You do this by typing:
-
-```console
-git clone https://github.com/ielab/afirm2019.git
+curl -X PUT http://localhost:9200/example
 ```
 
-This creates a copy of the GitHub repository to your local workstation, in your home. This repository contains most of the material for this practical sesssion.
+This command will return the answer: `{"acknowledged":true,"shards_acknowledged":true,"index":"example"}`.
+Great, now we have created an index called `example`.
 
-## Installing Elasticsearch
+(see https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html for documentation for index creation, including limitations, settings, etc)
 
-Next, let's download and install Elasticsearch. Do this by typing the following commands (make sure you are in your home -- you can download Elasticsearch where ever you want, but for simplicity in this tutorial we want to have it all in the same location):
-
-```console
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.tar.gz
-```
-Once the download is completed, unpack the tar.gz archive
+Next, we can add a simple document to our example index. Type in the console:
 
 ```console
-tar -xvzf elasticsearch-6.5.4.tar.gz
+curl -X POST http://localhost:9200/example/doc -H 'Content-Type: application/json' -d '{"title": "IR in Practice @AFIRM2019", "body": "Welcome to the IR in Practice session at AFIRM 2019!"}'
 ```
 
-Next we can run the Elasticsearch server:
+Again, the system should answer with an acknowledgement stating whether the insertion of this document has been successful (`"successful":1`). Note the id of the document is returned in the field `_id` of the answer (e.g. `"_id":"mHdmO2gB0VUfcQ9aYFHf"`).
 
+Next, put into the index another couple of example documents. In particular, insert the following two documents:
+
+```text
+{"title": "Introduction to IR @AFIRM2019", "body": "Welcome to the Introduction to IR session at AFIRM 2019!"}
+```
+
+```text
+{"title": "Multilingual IR @AFIRM2019", "body": "Welcome to the Multilingual IR session at AFIRM 2019!"}
+```
+
+Next, we are ready to do some basic search! We do this with the `GET` verb:
 ```console
-elasticsearch-6.5.4/bin/
-./elasticsearch
+curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{"query": {"match" : {  "title": "Multilingual"}}}'
 ```
 
-This will start up Elasticsearch. This console is now taken over by Elasticsearch. Let's open a new console.
-(NB: Alternatively, we could have run Elasticsearch in a `screen` session)
+I am reformatting the query below so as to read it better:
 
-Elasticsearch is now running as a RESTful service on the workstation and listening/responding at port 9200 (we could have change the port). Let us check if indeed it is running; type:
+```curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{
+  "query": {
+          "match" : {  
+                    "title": "Multilingual"
+                    }
+            }
+  }'```
 
-```console
-curl http://localhost:9200
-```
-Elasticsearch is now responding you with a JSON answer, which include information about the Elasticsearch instance you are running.
-
-
-#### Configuring Elasticsearch
-Configurations are in `config/elasticsearch.yml`. This configuration file, for example, allows to change the port in which Elasticsearch listens. Each Elasticsearch node could be configured differently.
-
-For now, we will not change these configurations, but you are welcome to explore this file during the break.
-
-## Interacting with Elasticsearch
-
-Commands to Elasticsearch are in the form `<REST verb> /<indexname>/<API>`.
-For example: `GET /myindex/_search`. 
-
-These could be issued to RESTful clients. We have already used an alternative: the `curl` linux command. In curl, the same GET request as above becomes `curl -XGET "http://localhost:9200/my_index/_search"`. Before trying this, however, we need to index some documents. We shall see this in the next activity.
+## Indexing a TREC collection
