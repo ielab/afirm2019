@@ -120,6 +120,10 @@ To do this, we will use Python. This activity requires some pre-requisites:
 2. Download the example Clueweb12 data we have packaged for you at XXX. Decompress the archive, and place it into a new folder at the path `~\clueweb12_example\`.
 
 
+**************
+
+**************
+
 ## Solutions to exercises
 
 #### Exercise 1
