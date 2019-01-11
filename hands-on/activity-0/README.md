@@ -1,4 +1,4 @@
-# Hands-on Activity 0
+# Hands-on Activity 0: Installation and basic interaction
 
 Welcome to the hands-on activities of the IR in Practice session at AFIRM 2019.
 
