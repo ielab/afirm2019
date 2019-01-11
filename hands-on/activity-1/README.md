@@ -39,7 +39,7 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
 
 I am reformatting the query below so as to read it better:
 
-```
+```console
 curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/json' -d '{
   "query": {
           "match" : {  
@@ -48,5 +48,9 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
             }
   }'
  ```
+ 
+ The result should show the retrieval of one document. 
+ 
+ Note that when executing the previous query, we had to specify a field on which to execute the matching (the `title` field). 
 
 ## Indexing a TREC collection
