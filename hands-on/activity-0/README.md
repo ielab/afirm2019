@@ -25,12 +25,12 @@ This creates a copy of the GitHub repository to your local workstation, in your 
 
 Next, let's download and install Elasticsearch. Do this by typing the following commands (make sure you are in your home -- you can download Elasticsearch where ever you want, but for simplicity in this tutorial we want to have it all in the same location):
 
-```bash
+```console
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.tar.gz
 ```
 Once the download is completed, unpack the tar.gz archive
 
-```bash
+```console
 tar -xvzf elasticsearch-6.5.4.tar.gz
 ```
 
