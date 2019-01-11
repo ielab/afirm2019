@@ -107,14 +107,14 @@ We shall apply pre-processing to both fields, including:
 - removing stop words based on the [Terrier](www.terrier.org) stopwords list
 - steeming using [Porter stemmer](https://lucene.apache.org/core/4_1_0/analyzers-common/org/tartarus/snowball/ext/PorterStemmer.html)
 
-### Pre-requisities
+#### Pre-requisities
 
 To do this, we will use Python. This activity requires some pre-requisites:
 * Elasticsearch Python API, which can be found [here](https://elasticsearch-py.readthedocs.io/en/master/)
 * The Clueweb12 corpus. We cannot distribute this (you can find it at [the Lemur Project website](https://lemurproject.org/clueweb12/)), but we have made available a couple of archives from that corpus (from part B).
 * The Terrier stopword list. We have included this file in the folder `activity-1` of this tutorial.
 
-### Preliminaries
+#### Preliminaries
 
 1. Place the Terrier stopword list (`terrier-stop.txt`) in the `/config/stopwords` folder within your ElasticSearch installation.
 2. Download the example Clueweb12 data we have packaged for you at XXX. Decompress the archive, and place it into a new folder at the path `~\clueweb12_example\`.
