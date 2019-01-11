@@ -96,6 +96,8 @@ curl -X GET http://localhost:9200/example/_search -H 'Content-Type: application/
 
 ## Indexing a TREC collection
 
+Next, we adventure ourselves into a more complex example: indexing a TREC collection. To this aim, we will consider a modern TREC collection: the ClueWeb12 collection. This collection is used in many of the current TREC and CLEF tasks, including [TREC Web Track 2013-2014](http://www-personal.umich.edu/~kevynct/trec-web-2014/), CLEF eHealth CHS Task 2016 and 2017. 
+
 
 
 
