@@ -118,7 +118,7 @@ To do this, we will use Python. This activity requires some pre-requisites:
 #### Preliminaries
 
 1. Place the Terrier stopword list (`terrier-stop.txt`) in the `/config/stopwords` folder within your ElasticSearch installation.
-2. Download the example Clueweb12 data we have packaged for you at XXX. Decompress the archive, and place it into a new folder at the path `~\clueweb12_example\`.
+2. Download the example Clueweb12 data we have packaged for you [here](https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0). Decompress the archive, and place it into a new folder at the path `~\clueweb12_example\`.
 
 
 **************
