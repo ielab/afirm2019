@@ -118,8 +118,20 @@ To do this, we will use Python. This activity requires some pre-requisites:
 #### Preliminaries
 
 1. Place the Terrier stopword list (`terrier-stop.txt`) in the `/config/stopwords` folder within your ElasticSearch installation.
-2. Download the example Clueweb12 data we have packaged for you [here](https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0). Download the zip file (`wget https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0`), decompress the archive, and place it into a new folder at the path `~\Clueweb12B_sample\`.
+2. Download the example Clueweb12 data we have packaged for you [here](https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0). Download the zip file (`wget https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0`), decompress the archive, and place the content into a the folder `~\Clueweb12B_sample\`.
 
+#### Indexing: examine the python notebook
+
+We have prepared for you a Python notebook with the code to index the sample ClueWeb12 using Elasticsearch. The notebook is contained in the file `indexing_clueweb12B.ipynb` in this activity folder. If you know how to run Jupyter notebooks, go ahead and run the notebook. Alternatively, follow the instructions below to run the notebook.
+
+
+##### Running Jupyther for visualising Python notebooks
+
+1. Open a terminal
+2. Type `jupyter notebook`
+3. Open your browser and direct it to the address `http://localhost:8888`. 
+4. This will display the content of your home folder. Now navigate to the directory containing the notebook `indexing_clueweb12B.ipynb`. Open the notebook by clicking on it.
+5. Now you can interact with the notebook. You can edit the text and the code. You can run a notebook by pressing the play button. To read more on how to use a Python notebook, you can look at [this resouce](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook), or [this brief introduction](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/).
 
 **************
 
