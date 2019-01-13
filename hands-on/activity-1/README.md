@@ -117,15 +117,15 @@ To do this, we will use Python. This activity requires some pre-requisites:
 
 #### Preliminaries
 
-1. Place the Terrier stopword list (`terrier-stop.txt`) in the `/config/stopwords` folder within your ElasticSearch installation.
-2. Download the example Clueweb12 data we have packaged for you [here](https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0). Download the zip file (`wget https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0`), decompress the archive, and place the content into a the folder `~\Clueweb12B_sample\`.
+1. Place the Terrier stopword list (`terrier-stop.txt`) in the `/config/stopwords` folder within your ElasticSearch installation. (Note: you need to create the `stopwords` folder; do this using the `mkdir` command.)
+2. Download the example Clueweb12 data we have packaged for you [here](https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0). Download the zip file (`wget https://www.dropbox.com/s/xg4761gl793v5pv/Clueweb12B_sample.zip?dl=0`), decompress the archive (using something like `unzip Clueweb12B_sample.zip`), and place the content into a the folder `~\Clueweb12B_sample\`.
 
 #### Indexing: examine the python notebook
 
 We have prepared for you a Python notebook with the code to index the sample ClueWeb12 using Elasticsearch. The notebook is contained in the file `indexing_clueweb12B.ipynb` in this activity folder. If you know how to run Jupyter notebooks, go ahead and run the notebook. Alternatively, follow the instructions below to run the notebook.
 
 
-##### Running Jupyther for visualising Python notebooks
+##### Running Jupyter for visualising Python notebooks
 
 1. Open a terminal
 2. Type `jupyter notebook`
