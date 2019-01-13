@@ -1,4 +1,4 @@
-# Hands-on Activity 4: Implementation of a new Retrieval Model in Elasticsearch
+# Hands-on Activity 5: Implementation of a new Retrieval Model in Elasticsearch
 
 Next, we describe how to implement a custom similarity function for Elasticsearch (in Lucene/Elasticsearch lingo, this is called a custom similarity plugin). As a case study, we shall implement the Kulback-Lieber (KL) Divergence between language models.
 

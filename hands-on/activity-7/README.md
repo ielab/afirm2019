@@ -20,7 +20,7 @@ We will setup the same index as that used in activity 6. If you have already don
 
 
 #### 1. Create the index
-We are going to run the following Elasticsearch command:
+We are going to run the following Elasticsearch command (if you have not already created this index back in activity 6):
 
     PUT book
     {
@@ -45,6 +45,7 @@ We are going to run the following Elasticsearch command:
 
 Which from the console is:
 
+```console
     curl -XPUT 'localhost:9200/book?pretty' -H 'Content-Type: application/json' -d'
     {
       "mappings": {
@@ -60,10 +61,13 @@ Which from the console is:
         }
       }
     }'
+```
 
 You can now check that this has been created correctly by viewing the mappings for the index `book`.
 
+```console
     curl -XGET 'localhost:9200/book/_mapping/chapter?pretty'
+```
 
 To which your response should be:
 
@@ -107,11 +111,13 @@ We are going to run the following Elasticsearch commands:
 
 Using CURL this becomes:
 
+```console
     curl -XPUT 'localhost:9200/book/chapter/1?pretty' -H 'Content-Type: application/json' -d'
     {
         "title" : "Introduction to Elasticsearch",
         "summary" : "Basic steps from installing to searching documents using Elasticsearch"
     }'
+```
 
 The response should be:
 
@@ -151,12 +157,14 @@ and
 We are now ready to search and produce snippets. 
 Let us first perform the search WITHOUT highlighting so that we can see a standard search response.  In this example we search for chapters which contain the word `configure` in it.
 
+```console 
     curl -XGET 'localhost:9200/book/chapter/_search?pretty' -H 'Content-Type: application/json' -d'
     {
         "query" : {
             "match" : { "summary" : "configure" }
         }
     }'
+```
 
 This generates the following result:
 

@@ -256,7 +256,7 @@ To do this, we will use some Python (which you can execute as a Python script, o
 
 #### Basic Search and Field Search
 
-Examine the code in the file `searchES-basic.py` within this activity folder. This file implements a simple search over two fields.
+Examine the code in the file `searchES-basic.py` within this activity folder. This file implements a simple search over two fields. (after examining the file below, you can run this in Python 3).
 
 First, we need to import the necessary API
 ```python

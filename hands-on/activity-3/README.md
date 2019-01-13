@@ -32,7 +32,8 @@ To do this, we will use Python (via a Python notebook). This activity requires s
 
 #### Preliminaries
 
-1. clone the GitHub repository for [`ir-kit`](https://github.com/hscells/ir-kit). (note, we suggest cloning the repository rather than installing the library using `pip`).
+1. clone the GitHub repository for [`ir-kit`](https://github.com/hscells/ir-kit). (note, we suggest cloning the repository rather than installing the library using `pip3` -- the library has not been updated since long and thus it is most likely not compatible with pip3).
+2. copy the folder `irkit`, contained in the GitHub repository `ir-kit` you have clone, into the folder for this activity.
 
 #### Produce a TREC run with Elasticsearch: examine the python notebook
 
