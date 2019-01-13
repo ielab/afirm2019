@@ -13,7 +13,12 @@ There is no ranking provided by the Boolean model; although some form of ranking
 
 To do this, we will use Python (via a Python notebook). This activity requires some pre-requisites:
 * Elasticsearch Python API, which can be found [here](https://elasticsearch-py.readthedocs.io/en/master/)
-*  an index based on media releases by the [Queensland Art Gallery of Modern Art](https://data.qld.gov.au/dataset/qagoma-media-releases/resource/a1e4dffa-edb1-4e6d-a4a0-353aca79e9a3) (see exercise at the beginning of the python notebook we introduce below).
+*  an index based on media releases by the [Queensland Art Gallery of Modern Art](https://data.qld.gov.au/dataset/qagoma-media-releases/resource/a1e4dffa-edb1-4e6d-a4a0-353aca79e9a3) (see exercise at the beginning of the python notebook we introduce below). To create this, complete the following exercise
+
+*****
+
+#### Exercise 1
+Download the data at [https://www.qagoma.qld.gov.au/feed](https://www.qagoma.qld.gov.au/feed).
 
 
 
@@ -30,3 +35,19 @@ We have prepared for you a Python notebook with the code to perform Boolean retr
 4. This will display the content of your home folder. Now navigate to the directory containing the notebook `boolean-retrieval.ipynb`. Open the notebook by clicking on it.
 5. Now you can interact with the notebook. You can edit the text and the code. You can run a notebook by pressing the play button. To read more on how to use a Python notebook, you can look at [this resouce](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook), or [this brief introduction](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/).
 
+*******
+
+#### Solutions to Exercise 1
+
+From a command line, execute the following commands
+
+```console
+cd ~/
+wget https://www.qagoma.qld.gov.au/feed
+
+# This will download the data to the current path (your home folder if you did cd ~/). The data will be in the file feed.
+
+curl -X PUT http://localhost:9200/goma
+
+curl -X POST http://localhost:9200/goma/doc -H 'Content-Type: application/json' -d @feed
+```
