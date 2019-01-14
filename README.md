@@ -9,7 +9,7 @@ Slides are available in the [slides folder](https://github.com/ielab/afirm2019/t
 * [Activity 0: Installation and basic interaction](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-0)
 * [Activity 1: Basic Indexing and Search in Elasticsearch](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-1)
 * [Activity 2: Boolean retrieval](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-2)
-* [Activity 3: Produce a TREC Run - changing retrieval models](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-3)
+* [Activity 3: Produce a TREC Run](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-3)
 * [Activity 4: Access a Term Vector](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-4)
 * [Activity 5: Implement a New Retrieval Model](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-5)
 * [Activity 6: Document Priors and Boosting](https://github.com/ielab/afirm2019/tree/master/hands-on/activity-6)
