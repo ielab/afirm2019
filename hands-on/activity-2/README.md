@@ -12,7 +12,9 @@ There is no ranking provided by the Boolean model; although some form of ranking
 #### Pre-requisities
 
 To do this, we will use Python (via a Python notebook). This activity requires some pre-requisites:
+
 * Elasticsearch Python API, which can be found [here](https://elasticsearch-py.readthedocs.io/en/master/)
+* Install the `requests` library using the command `sudo pip3 install requests` from a command line/terminal window.
 *  an index based on media releases by the [Queensland Art Gallery of Modern Art](https://data.qld.gov.au/dataset/qagoma-media-releases/resource/a1e4dffa-edb1-4e6d-a4a0-353aca79e9a3) (see exercise at the beginning of the python notebook we introduce below). To create this, complete the following exercise
 
 *****
@@ -43,7 +45,8 @@ From a command line, execute the following commands
 
 ```console
 cd ~/
-wget https://www.qagoma.qld.gov.au/feed
+wget https://www.qagoma.qld.gov.au/feed 
+mv feed feed.json
 
 # This will download the data to the current path (your home folder if you did cd ~/). The data will be in the file feed.
 
