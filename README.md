@@ -1,6 +1,6 @@
 # AFIRM 2019 - Session on IR in Practice
 
-* [Dr Guido Zuccon](www.zuccon.net), [ielab](ielab.io), University of Queensland, Australia*
+_[Dr Guido Zuccon](www.zuccon.net), [ielab](ielab.io), University of Queensland, Australia_
 
 Welcome to the GitHub repository for the 2019 ACM SIGIR/SIGKDD Africa Summer School on Machine Learning for Data Mining and Search (AFIRM 2019) session on IR in Practice, 14-18 January 2019, Cape Town, South Africa. 
 
