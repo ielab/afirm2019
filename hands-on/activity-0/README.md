@@ -37,7 +37,7 @@ tar -xvzf elasticsearch-6.5.4.tar.gz
 Next we can run the Elasticsearch server:
 
 ```console
-elasticsearch-6.5.4/bin/
+cd elasticsearch-6.5.4/bin/
 ./elasticsearch
 ```
 
